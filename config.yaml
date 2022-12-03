@@ -1,0 +1,63 @@
+input: 'test.csv'
+output: ''
+plot_main_title: "Test Scenario"
+plot_sub_title: "Response Metrics vs Resource Utilization"
+
+primary_x:
+  axis: 'users'
+  title: auto
+  ticks: auto
+  rotation: 0
+  font_size: 12
+
+primary_y:
+  axes: ['cpu','mem','hs_cpu']
+  labels: ['CPU (%)','Memory (%)','Hyperscale CPU (%)']
+  graph_type: bar
+  title: 'Resource Utilization (%)'
+  font_size: 12
+  ticks: auto
+  colors: auto
+  limits: auto
+
+secondary_y:
+  axes: ['latency','throughput']
+  labels: ['Latency (sec)','Throughput (/sec)']
+  graph_type: line
+  title: auto
+  font_size: 12
+  ticks: auto
+  colors: auto
+  limits: auto
+
+line_graph_properties:
+  line_width: 2.5
+  line_style: '-'
+  markers: True
+  marker_style: 'o'
+  marker_size: 3
+
+data_labels:
+  show: True
+  precision: 2
+  font_size: 8
+
+grid:
+  show_x_grid: True
+  primary_y:
+    line_style: '--'
+    line_width: 0.5
+    color: 'grey'
+  secondary_y:
+    line_style: '--'
+    line_width: 0.5
+    color: 'grey'
+
+legend: True
+font_style: 'Graphik'
+show_tick_limits: True
+tick_size: 10
+main_title_size: 16
+sub_title_size: 14
+plot_size_in_inches: [10, 6]
+quality_in_dpi: 100
